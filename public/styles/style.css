@@ -1,3 +1,139 @@
+/* reset start */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* reset ends */
+
+a {
+  text-decoration: underline dotted;
+}
+
 a[target="_blank"]::after {
   background: url("/images/external-link-symbol.png") right bottom / 15px 15px
     no-repeat;
@@ -5,6 +141,45 @@ a[target="_blank"]::after {
   width: 20px;
   height: 15px;
   content: "";
+}
+
+label {
+  padding-right: 3px;
+}
+
+label::after {
+  content: ":";
+}
+
+button {
+  padding: 4px;
+  border-radius: 4px;
+}
+
+input {
+  padding: 4px;
+  margin: 4px;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+#placelistSection {
+  flex: 1;
+  padding: 5px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#daa500),
+    to(#ffd700)
+  );
+  background-image: -webkit-linear-gradient(top, #f8f8ff, #d3d3d3);
+  background-image: -moz-linear-gradient(top, #f8f8ff, #d3d3d3);
+  background-image: linear-gradient(to bottom, #f8f8ff, #d3d3d3);
 }
 
 #placelist {
@@ -25,14 +200,38 @@ a[target="_blank"]::after {
   padding: 5px;
   margin: 5px;
   border: 1px solid;
-  border-radius: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px;
+  background-color: #f0ffff;
 }
 
 .place-item > header {
+  font-size: 1.2rem;
   font-weight: bold;
+  text-align: center;
   border-bottom: 1px solid;
 }
 
 .place-item .details {
   min-height: 1em;
+  text-align: center;
+}
+
+#addPlaceSection {
+  display: block;
+  box-shadow: 0 2px 1px;
+  padding: 5px;
+  margin-bottom: 3px;
+  background-image: linear-gradient(#ffd700, #daa520);
+}
+
+#addPlaceForm {
+  display: flex;
+  justify-content: center;
+}
+
+#addPlaceForm label,
+#addPlaceForm input,
+#addPlaceForm button {
+  font-size: 1.2rem;
 }

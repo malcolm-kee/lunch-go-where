@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import store from "./config/store";
 
-import PlaceListContainer from "./components/PlaceListContainer";
+import HomePage from "./components/HomePage";
 
 class App extends Component {
   render() {
@@ -13,7 +13,7 @@ class App extends Component {
         <Provider store={store}>
           <div className="App">
             <Switch>
-              <Route path="/" component={PlaceListContainer} />
+              <Route path="/" component={HomePage} />
             </Switch>
           </div>
         </Provider>

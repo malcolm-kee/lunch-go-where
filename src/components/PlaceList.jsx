@@ -1,7 +1,7 @@
 import React from "react";
 
 const PlaceList = ({ places }) => (
-  <div>
+  <section id="placelistSection">
     <ul id="placelist">
       {places.map(place => (
         <li key={place.id}>
@@ -18,7 +18,7 @@ const PlaceList = ({ places }) => (
         </li>
       ))}
     </ul>
-  </div>
+  </section>
 );
 
 export default PlaceList;
