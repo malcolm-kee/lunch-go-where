@@ -1,0 +1,38 @@
+a[target="_blank"]::after {
+  background: url("/images/external-link-symbol.png") right bottom / 15px 15px
+    no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 15px;
+  content: "";
+}
+
+#placelist {
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#placelist li {
+  width: 15rem;
+  display: block;
+}
+
+#placelist .place-item {
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.place-item > header {
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+
+.place-item .details {
+  min-height: 1em;
+}
