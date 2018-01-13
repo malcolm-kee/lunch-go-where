@@ -6,7 +6,13 @@ import PropTypes from "prop-types";
 const AddPlaceForm = ({ onSubmit, onChange, name }) => (
   <div id="AddPlaceFormContainer">
     <form id="AddPlaceForm" onSubmit={onSubmit}>
-      <input type="text" name="name" onChange={onChange} value={name} />
+      <input
+        type="text"
+        name="name"
+        onChange={onChange}
+        value={name}
+        placeholder="Add your fav lunch place"
+      />
       <button type="submit">Add</button>
     </form>
   </div>
