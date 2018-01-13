@@ -19,10 +19,32 @@
 }
 
 .place-item > header {
+  font-size: 1.2rem;
   font-weight: bold;
+  text-align: center;
   border-bottom: 1px solid;
 }
 
 .place-item .details {
   min-height: 1em;
+  text-align: center;
+}
+
+#addPlaceSection {
+  display: block;
+  box-shadow: 0 2px 1px;
+  padding: 5px;
+  margin-bottom: 3px;
+  background-image: linear-gradient(#ffd700, #daa520);
+}
+
+#addPlaceForm {
+  display: flex;
+  justify-content: center;
+}
+
+#addPlaceForm label,
+#addPlaceForm input,
+#addPlaceForm button {
+  font-size: 1.2rem;
 }
