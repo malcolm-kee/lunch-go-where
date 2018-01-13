@@ -1,9 +1,7 @@
-// @flow
-
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import PlaceList from "./PlaceList";
+import PlaceList from "./view";
 
 class PlaceListContainer extends Component {
   render() {
