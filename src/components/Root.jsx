@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Provider } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -17,5 +18,11 @@ const Root = ({ store }) => (
     </Provider>
   </BrowserRouter>
 );
+
+Root.propTypes = {
+  store: PropTypes.shape({
+    place: PropTypes.object
+  }).isRequired
+};
 
 export default Root;
