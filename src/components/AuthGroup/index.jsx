@@ -1,10 +1,20 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { isEmpty, isLoaded, withFirebase } from "react-redux-firebase";
 
 import AuthGroup from "./view";
 
 class AuthGroupContainer extends Component {
+  static propTypes = {
+    firebase: PropTypes.shape({
+      logout: PropTypes.func.isRequired
+    }).isRequired,
+    auth: PropTypes.shape({
+      displayName: PropTypes.string
+    }).isRequired
+  };
+
   logout = () => {
     const { firebase } = this.props;
 

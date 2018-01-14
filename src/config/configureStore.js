@@ -13,9 +13,11 @@ const configureStore = () => {
 
   const store = createStoreWithFirebase(
     reducer,
+    /* eslint-disable */
     typeof window === "object" && typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== "undefined"
       ? window.__REDUX_DEVTOOLS_EXTENSION__()
       : f => f
+    /* eslint-enable */
   );
 
   return store;

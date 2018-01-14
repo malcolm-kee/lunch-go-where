@@ -1,14 +1,23 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import PlaceList from "./view";
 
-class PlaceListContainer extends Component {
-  render() {
-    const { places } = this.props;
-    return <PlaceList places={places} />;
-  }
-}
+const PlaceListContainer = ({ places }) => <PlaceList places={places} />;
+
+PlaceListContainer.propTypes = {
+  places: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string
+    })
+  )
+};
+
+PlaceListContainer.defaultProps = {
+  places: []
+};
 
 const mapStateToProps = state => {
   const placesObj = state.place;

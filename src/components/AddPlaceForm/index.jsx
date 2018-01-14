@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import { addPlace } from "../../actions/place";
@@ -6,6 +7,10 @@ import { addPlace } from "../../actions/place";
 import AddPlaceForm from "./view";
 
 class AddPlaceFormContainer extends React.Component {
+  static propTypes = {
+    dispatchAddPlace: PropTypes.func.isRequired
+  };
+
   state = {
     id: Date.now(),
     name: ""

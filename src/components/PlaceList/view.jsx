@@ -1,5 +1,7 @@
-import "./style.css";
 import React from "react";
+import PropTypes from "prop-types";
+
+import "./style.css";
 
 const PlaceList = ({ places }) => (
   <section id="placelistSection">
@@ -21,5 +23,18 @@ const PlaceList = ({ places }) => (
     </ul>
   </section>
 );
+
+PlaceList.propTypes = {
+  places: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string
+    })
+  )
+};
+
+PlaceList.defaultProps = {
+  places: []
+};
 
 export default PlaceList;

@@ -1,6 +1,6 @@
-import "./style.css";
-
 import React from "react";
+
+import "./style.css";
 
 import AddPlaceForm from "./../AddPlaceForm";
 import AuthGroup from "./../AuthGroup";

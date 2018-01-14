@@ -1,7 +1,8 @@
-import "./style.css";
-
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+
+import "./style.css";
 
 import Loader from "../Loader";
 
@@ -23,6 +24,17 @@ const AuthGroup = ({ logout, loggedIn, isLoading, userName }) => {
       Login
     </Link>
   );
+};
+
+AuthGroup.propTypes = {
+  logout: PropTypes.func.isRequired,
+  loggedIn: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  userName: PropTypes.string
+};
+
+AuthGroup.defaultProps = {
+  userName: ""
 };
 
 export default AuthGroup;

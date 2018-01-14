@@ -1,10 +1,20 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { isEmpty, isLoaded, withFirebase } from "react-redux-firebase";
 
 import LoginPage from "./view";
 
 class LoginPageContainer extends Component {
+  static propTypes = {
+    firebase: PropTypes.shape({
+      login: PropTypes.func
+    }).isRequired,
+    auth: PropTypes.shape({
+      displayName: PropTypes.string
+    }).isRequired
+  };
+
   signInWithGoogle = () => {
     const { firebase } = this.props;
 
