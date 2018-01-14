@@ -1,4 +1,5 @@
-import { describe, expect, it } from "jest"; // eslint-disable-line
+/* eslint-disable */
+import "jest";
 
 import placeReducer from "./placeReducer";
 import { addPlace, removePlace } from "../actions/place";
