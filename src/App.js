@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import store from "./config/store";
 
+import LoginPage from "./components/LoginPage";
 import LandingPage from "./components/LandingPage";
 
 class App extends Component {
@@ -13,7 +14,8 @@ class App extends Component {
         <Provider store={store}>
           <div className="App">
             <Switch>
-              <Route path="/" component={LandingPage} />
+              <Route path="/" exact component={LandingPage} />
+              <Route path="/login" exact component={LoginPage} />
             </Switch>
           </div>
         </Provider>

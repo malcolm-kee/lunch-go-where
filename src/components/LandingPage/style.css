@@ -1,0 +1,11 @@
+#LandingPageHeader {
+  /* flex settings */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* styling */
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background: purple;
+}

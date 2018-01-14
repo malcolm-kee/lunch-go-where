@@ -5,16 +5,16 @@ const PlaceList = ({ places }) => (
   <section id="placelistSection">
     <ul id="placelist">
       {places.map(place => (
-        <li key={place.id}>
-          <section className="place-item">
-            <header>{place.name}</header>
-            <div className="details">
-              {place.googleMapUrl && (
-                <a href={place.googleMapUrl} target="_blank">
+        <li key={place.id} className="card">
+          <section className="place-item card-block">
+            <header className="card-title">{place.name}</header>
+            {place.googleMapUrl && (
+              <div className="card-block">
+                <a href={place.googleMapUrl} target="_blank" className="card-link">
                   View Details
                 </a>
-              )}
-            </div>
+              </div>
+            )}
           </section>
         </li>
       ))}

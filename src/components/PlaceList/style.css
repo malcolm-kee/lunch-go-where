@@ -9,7 +9,7 @@
 
 #placelist li {
   width: 15rem;
-  display: block;
+  margin: 5px;
 }
 
 #placelist .place-item {
@@ -22,7 +22,6 @@
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
-  border-bottom: 1px solid;
 }
 
 .place-item .details {
