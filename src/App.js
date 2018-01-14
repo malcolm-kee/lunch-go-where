@@ -1,27 +1,11 @@
-import React, { Component } from "react";
-import { Provider } from "react-redux";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import React from "react";
 
-import store from "./config/store";
+import configureStore from "./config/configureStore";
 
-import LoginPage from "./components/LoginPage";
-import LandingPage from "./components/LandingPage";
+import Root from "./components/Root";
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <Provider store={store}>
-          <div className="App">
-            <Switch>
-              <Route path="/" exact component={LandingPage} />
-              <Route path="/login" exact component={LoginPage} />
-            </Switch>
-          </div>
-        </Provider>
-      </BrowserRouter>
-    );
-  }
-}
+const store = configureStore();
+
+const App = () => <Root store={store} />;
 
 export default App;
